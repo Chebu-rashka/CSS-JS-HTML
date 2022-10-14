@@ -1,0 +1,64 @@
+.container{
+    width: 300px;
+    height: 500px;
+    background-color: white;
+}
+.section1{
+    display: flex;
+    align-items: center;
+    width: 300px;
+    height: 150px;
+    border: 1px solid black;
+    background-color: black;
+    border-radius: 15px 15px 0px 0px;
+   
+   
+}
+.section1-1{
+    display: flex;
+    justify-content: flex-end;
+    margin-left: 20px;
+    width: 250px;
+    height: 90px;
+    border: 1px solid black;
+    border-radius: 15px 15px;
+    background-color: white;
+    font-size: 50px;
+    color: grey;
+    word-wrap: break-word;
+    word-break: break-all;
+    font-family:'Gill Sans', 'Gill Sans MT', "Calibri", 'Trebuchet MS', sans-serif
+
+}
+.section2{
+    display: flex;
+    width: 300px;
+    height: 350px;
+    border: 1px solid black;
+    background-color: black;
+    border-radius: 0px 0px 15px 15px;
+
+}
+.row1, .row2, .row3,.row4{
+    margin-top: 15px;
+    display: flex;
+    justify-content: space-around;
+    width: 300px;
+    height: 70px;
+    border: 1px solid black;
+    font-size: 30px;
+}
+.number, .operator, .equal, .clear{
+    display: flex;
+    justify-content: space-around;
+    height:40px;
+    width: 40px;
+    border:1 solid black;
+    padding: 2px 5px;
+    border-radius: 8px;
+    background-color:white;
+    color: black;
+    cursor: pointer;
+    padding: 5px 5px;
+
+}
