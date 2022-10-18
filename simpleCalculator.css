@@ -46,8 +46,8 @@
     display: flex;
     justify-content: space-around;
     width: 300px;
-    height: 70px;
-   
+    height: 50px;
+    border: 1px solid black;
     font-size: 30px;
 }
 .number:hover{
@@ -60,7 +60,7 @@
     color:white;
     transition: 0.3 ease-in-out;
 }
-.number, .operator, #equal, #clear{
+.number, .operator, #equal, #dot{
     display: flex;
     justify-content: space-around;
     height:40px;
@@ -73,4 +73,24 @@
     cursor: pointer;
     padding: 5px 5px;
 
+}
+.row5{
+    display: flex;
+    margin-top: 15px;
+    justify-content: space-around;
+    width: 300px;
+    height: 50px;
+    font-size: 30px;
+}
+#clear{
+    display: flex;
+    justify-content: space-around;
+    height:40px;
+    width: 270px;
+    padding: 2px 5px;
+    border-radius: 8px;
+    background-color:white;
+    color: black;
+    cursor: pointer;
+    padding: 5px 5px;
 }

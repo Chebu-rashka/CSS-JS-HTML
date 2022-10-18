@@ -175,11 +175,12 @@ const clearbtn = document.getElementById("clear");
 const equalsbtn = document.getElementById("equal");
 const operators = document.getElementsByClassName("operator");
 const buttons = document.getElementsByClassName("number");
+const dotbttn=document.getElementById("dot")
 // let operatorResult= false
 let num1 = 0;
 let num2 = 0;
 let op = null;
-let initialCal = true;
+let initialCal = true; // ymar neg yumnas ehelj bgaga hadg
 const calculate=()=>{
     if (op === "+") {
         num1=parseFloat(num1) + parseFloat(num2);
@@ -196,15 +197,15 @@ const calculate=()=>{
       }
       if (op === "/") {
         num1=parseFloat(num1) / parseFloat(num2);
-        display.innerHTML = num1;
+        display.innerHTML = num1.toExponential(4);
       }
 }
 display.innerHTML = num1;
 
 for (let i = 0; i < buttons.length; i++) {
   buttons[i].addEventListener("click", (event) => {
-    console.log(initialCal, op);
-    if (initialCal === false && !op) {
+    // console.log(initialCal, op);
+    if (initialCal === false && !op) { // tentsuu bhgu ued op bhgu ued
       display.innerHTML = "";
     }
     if (display.innerHTML === "0") display.innerHTML = event.target.innerHTML;
@@ -238,7 +239,7 @@ clearbtn.addEventListener("click", (event) => {
   console.log(event.target.innerHTML);
   num1 = 0;
   num2 = 0;
-  op = "";
+  op = ""; //gargasan ur dungee neg yum deer hadgalah
 
   display.innerHTML = num1;
 });
@@ -249,3 +250,12 @@ equalsbtn.addEventListener("click", () => {
 //   num2 = null;
   initialCal = false;
 });
+
+// dot
+dotbttn.addEventListener("click", (event) => {
+  if(
+    display.innerHTML.indexOf('.')===-1
+  )
+    display.innerHTML+=event.target.innerHTML;
+});
+
